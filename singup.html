@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" media="screen" href="layout1.css" />
+    </head>
+    <body>
+
+        <div class="header">
+            <img src="lg.png" width="160" height="160"  align="left" hspace="20">
+            <img src="kab.png" width="160" height="160"  align="right" hspace="20">
+            <h1>SMP NEGERI 4 KEPANJEN</h1>
+            <p>Jl. Kawi No.3, Kepanjen, Malang, Jawa Timur 65163
+(0341) 395013
+info@smpn4kepanjen.sch.id </p>
+        </div>
+
+        <div class="topnav">
+            <a href="file:///E:/VSCode/Vs Code File/WEB2/web2.html#">Beranda</a>
+            <a href="file:///E:/VSCode/Vs Code File/WEB2/profil2.html">Tentang Sekolah</a>
+            <a href="file:///E:/VSCode/Vs Code File/WEB2/organ.html">Kesiswaan</a>
+            <a href="#">Prestasi</a>
+            <a href="file:///E:/VSCode/Vs Code File/WEB2/agenda.html">Agenda kegiatan</a>
+            <a href="file:///E:/VSCode/Vs Code File/WEB2/singup.html" style="float:right">SignUp</a>
+        </div>
+
+       <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                        
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value=" " required autofocus>
+
+                                
+                                    <span class="help-block">
+                                        <strong></strong>
+                                    </span>
+                                
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
+
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="footer">
+        <p>
+            <h4>TERIMA KASIH!</h4>
+            <h2>DHATYANAKA</h2>
+        </P>
+        </div>
+		<marquee bgcolor="white" behavior="scroll" direction="right" scrollamount="8"> <font face="Times New Rowman" 
+color="black" > &copy; Aisyah Kamila El Savira - SMK Telkom Malang</font>
+</marquee>
+		<br/><br/>
+    </body>
+</html>
